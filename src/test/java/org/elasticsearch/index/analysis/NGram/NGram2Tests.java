@@ -35,7 +35,7 @@ public class NGram2Tests {
         String characters = "_-0123456789";
         for (int i = 0, len = strings.length; i < len; i++) {
             StringReader reader = new StringReader(strings[i]);
-            final StandardTokenizer source =   new StandardTokenizer(Version.LUCENE_43, reader);
+            final StandardTokenizer source =   new StandardTokenizer(Version.LUCENE_42, reader);
             TokenStream stream = new NGramTokenFilter(source, 3, totalLength);
             stream.reset();
             List<String> list = new ArrayList<String>();

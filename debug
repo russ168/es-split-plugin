@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mvn package -DskipTests
+unzip target/releases/elasticsearch-analysis-split-2.0.0.zip -d ./
+cp -rf ./elasticsearch-analysis-split-2.0.0.jar guava-14.0.1.jar /home/jackie/ES/plugins/split/
